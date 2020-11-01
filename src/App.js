@@ -1,4 +1,6 @@
 import "./App.css";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 function App() {
   return (
@@ -8,14 +10,11 @@ function App() {
           <h1 class="text-center">React Textarea with Editor</h1>
           {/* <!-- contact form --> */}
           <form>
-            <div class="form-group">
-              <label for="email_body">Message</label>
-              <textarea
-                class="form-control"
-                id="email_body"
-                rows="5"
-              ></textarea>
-            </div>
+            <Editor
+              wrapperClassName="wrapper"
+              editorClassName="editor"
+              toolbarClassName="toolbar"
+            />
 
             <button type="submit" class="btn btn-primary">
               Submit
